@@ -1,0 +1,51 @@
+.bg-image {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 0.83rem;
+}
+
+.each-card {
+  height: 6rem;
+
+}
+
+.front {
+  position: absolute;
+}
+
+.outer-box {
+  min-height: 100%;
+  flex-wrap: wrap;
+}
+
+.outer-box > div {
+  display: flex; 
+  flex-basis: calc(25% - 40px);  
+}
+
+.outer-box > div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 2rem;
+}
+
+.flipped {
+  position: relative;
+  z-index: 2;
+}
+
+.top {
+  z-index: 2;
+}
+
+.bottom {
+  visibility: hidden;
+}
+
+.bottom-area {
+  width: 100%;
+  justify-content: space-evenly;
+}

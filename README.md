@@ -1,5 +1,5 @@
 # Demo Link
-https://kamyagarg.github.io/github.io-memory-game/
+https://kamyagarg.github.io/react-memory-game/
 
 # Getting Started with Create React App
 

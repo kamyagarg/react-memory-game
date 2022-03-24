@@ -22,7 +22,7 @@
 
 .outer-box > div {
   display: flex; 
-  flex-basis: calc(25% - 40px);  
+  flex-basis: calc(25% - 0.33rem);  
 }
 
 .outer-box > div > div {

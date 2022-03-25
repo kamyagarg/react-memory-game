@@ -48,6 +48,7 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState();
   const [selectedCard, setSelectedCard] = useState();
   const [totalMatched, setTotalMatched] = useState(0);
+  const [disableClick, setDisableClick] = useState();
 
   useEffect(() => {
     shuffleAlphabets();
@@ -61,6 +62,7 @@ function App() {
 
   useEffect(() => {
     if (choiceOne && choiceTwo) {
+      setDisableClick(true);
       if (choiceOne.title == choiceTwo.title) {
         compareSelectedCards();
         resetTurns();
@@ -108,7 +110,8 @@ function App() {
   const resetTurns = () => {
     setChoiceTwo();
     setChoiceOne();
-    setTurns(turns + 1)
+    setTurns(turns + 1);
+    setDisableClick(false);
   }
 
   console.log("cards", cards);
@@ -130,9 +133,10 @@ function App() {
         handleClick={handleClickFun}
         selectedCardOne={choiceOne}
         selectedCardTwo={choiceTwo}
+        disableCardSelection={disableClick}
       />
       <div className='flex bottom-area align-items-center'>
-        <div className='total-turns'>Total Turns: {2 * turns}</div>
+        <div className='total-turns'>Total Turns: {turns}</div>
         <div className='total-matches'>Total Matches: {totalMatched}</div>
       </div>
     </div>

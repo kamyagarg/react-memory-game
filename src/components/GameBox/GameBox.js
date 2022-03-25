@@ -4,11 +4,13 @@ import Images from "../Images";
 import "./GameBox.css";
 
 const GameBox = (props) => {
-  const { cards, handleClick, selectedCardOne, selectedCardTwo } = props;
+  const { cards, handleClick, selectedCardOne, selectedCardTwo, disableCardSelection } = props;
   
   // console.log("flipped in gamebox",flipped);
   const handleCardClick = (card) => {
-    handleClick(card);
+    if(!disableCardSelection) {
+      handleClick(card);
+    }
   }
 
   return(
